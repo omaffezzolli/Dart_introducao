@@ -69,5 +69,34 @@ void main() {
     print('loop -> $contador');
   }
 
-  //5-
+ //5-Metodos e classes
+
+ Celular celulardoJoao = Celular('azul, 5, 1.0, 6.1');
+ Celular celulardoLucas = Celular('preto, 12, 3.0, 5.5');
+
+print (celulardoJoao.toString());
+print (celulardoLucas.toString());
+
+double resultado = celulardoJoao.valorDoCelular(1000);
+print (resultado);
+
+}
+
+class Celular{
+
+final String cor;
+final int qtdPros;
+final double tamanho;
+final double peso;
+
+Celular(this.cor, this.qtdPros, this.tamanho, this.peso);
+
+String toString(){
+  return 'cor $cor, qtdPros $qtdPros, peso $peso, tamanho $tamanho' ;
+}
+
+double valorDoCelular(double valor){
+  return valor * qtdPros;
+}
+
 }
